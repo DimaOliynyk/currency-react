@@ -51,7 +51,13 @@ header{
 
     color: oldlace;
     border-radius: 5px;
+    background-color: rgb(110, 107, 107);
+    color: rgb(65, 64, 64);
+}
+
+.second{
     background-color: rgb(53, 52, 52);
+    color: rgb(149, 144, 144);
 }
 
 .currency-item p{

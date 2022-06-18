@@ -4,15 +4,26 @@ import './Home.css';
 
 const CurrencyInfo = props => {
     const items = [];
-    for(let currency in props.currency.rates){
+    let i = 0;
+    for(let currency in props.currency.rates){ 
+        i++
         console.log(currency)
-        const item = (
-            <div className='currency-item'>
-                <p>{currency} : {props.currency.rates[currency]}</p>
-            </div>
-        )
+        if(i % 2 === 0){
+            const item = (
+                <div className='currency-item'>
+                    <p>{currency} : {props.currency.rates[currency]}</p>
+                </div>
+            )
+            items.push(item)
+        } else {
+            const item = (
+                <div className='currency-item second'>
+                    <p>{currency} : {props.currency.rates[currency]}</p>
+                </div>
+            )
+            items.push(item)
+        }
 
-        items.push(item)
     }
 
     return items;
